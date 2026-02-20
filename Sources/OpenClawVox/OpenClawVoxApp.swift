@@ -1,8 +1,10 @@
 import SwiftUI
+import ServiceManagement
 
 @main
 struct OpenClawVoxApp: App {
     @StateObject private var model = AppModel()
+    @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
 
     var body: some Scene {
         MenuBarExtra("OpenClaw Vox", systemImage: "waveform") {
@@ -56,6 +58,19 @@ struct OpenClawVoxApp: App {
                 }
 
                 Toggle("Auto speak", isOn: $model.autoSpeak)
+
+                Toggle("Start at Login", isOn: $launchAtLogin)
+                    .onChange(of: launchAtLogin) { _, newValue in
+                        do {
+                            if newValue {
+                                try SMAppService.mainApp.register()
+                            } else {
+                                try SMAppService.mainApp.unregister()
+                            }
+                        } catch {
+                            launchAtLogin = SMAppService.mainApp.status == .enabled
+                        }
+                    }
 
                 Divider()
 

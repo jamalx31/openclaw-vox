@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.openclaw.vox</string>
+    <key>CFBundleName</key>
+    <string>OpenClaw Vox</string>
+    <key>CFBundleDisplayName</key>
+    <string>OpenClaw Vox</string>
+    <key>CFBundleExecutable</key>
+    <string>OpenClawVox</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>OpenClaw Vox needs microphone access for voice input.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>OpenClaw Vox needs speech recognition for converting your voice to text.</string>
+</dict>
+</plist>
