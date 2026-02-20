@@ -26,6 +26,7 @@ mkdir -p "${BUNDLE_DIR}/Contents/Resources"
 
 cp "$BIN" "${BUNDLE_DIR}/Contents/MacOS/OpenClawVox"
 cp "${SCRIPT_DIR}/Info.plist" "${BUNDLE_DIR}/Contents/"
+cp "${SCRIPT_DIR}/AppIcon.icns" "${BUNDLE_DIR}/Contents/Resources/"
 
 echo "Code signing..."
 codesign --force --sign - \

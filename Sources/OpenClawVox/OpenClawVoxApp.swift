@@ -7,7 +7,7 @@ struct OpenClawVoxApp: App {
     @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
 
     var body: some Scene {
-        MenuBarExtra("OpenClaw Vox", systemImage: "waveform") {
+        MenuBarExtra("OpenClaw Vox", systemImage: "bubble.left.fill") {
             VStack(alignment: .leading, spacing: 10) {
                 Text("OpenClaw Vox")
                     .font(.headline)
